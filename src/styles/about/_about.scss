@@ -1,0 +1,84 @@
+@use "../global/" as *;
+header {
+  padding: 15rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-about-data {
+    display: flex;
+    flex-direction: column;
+    font-family: $title;
+    flex-direction: column;
+    justify-content: center;
+    .about-heading::after {
+      content: "";
+      position: absolute;
+      background-color: $primary-md;
+      height: 0.5rem;
+      width: 20%;
+      left: 40%;
+      bottom: -5px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    .about-heading {
+      text-align: center;
+      align-items: center;
+      color: $gray;
+      font-family: $title;
+      font-weight: 900;
+      position: relative;
+      text-transform: capitalize;
+      font-size: 5.2rem;
+      @media (max-width: 500px) {
+        font-size: $h3-size;
+      }
+    }
+    .hero-para {
+      font-family: $title;
+      margin-top: 1.5rem;
+      margin-bottom: 3.4rem;
+      max-width: 60rem;
+      text-align: justify;
+    }
+  }
+
+  .section-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    picture {
+      text-align: center;
+    }
+    .hero-img {
+      width: 50rem;
+    }
+    #animation {
+      animation: up-down 2s ease-in-out infinite alternate-reverse both;
+      @keyframes up-down {
+        0% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+  }
+
+  @media (max-width: 998px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    .container {
+      padding: 0 3.2rem;
+    }
+  }
+}

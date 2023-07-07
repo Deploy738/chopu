@@ -1,0 +1,10 @@
+@forward "./styles/global/";
+@forward "../src/styles/navbar/";
+@forward "../src/styles/home/";
+@forward "../src/styles/about/";
+@forward "../src/styles/footer/";
+@forward "../src/styles/gallery/";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

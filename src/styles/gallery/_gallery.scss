@@ -1,0 +1,37 @@
+@use "../global/" as *;
+
+.gallery {
+  padding: 15rem 0;
+  max-width: 133rem;
+  margin: 0 auto;
+
+  .topic {
+    font-family: $title;
+    font-weight: 900;
+    font-size: 5.2rem;
+    color: $gray;
+    text-align: center;
+    position: relative;
+    text-transform: capitalize;
+  }
+  .topic::after {
+    content: "";
+    position: absolute;
+    background-color: $primary-md;
+    height: 0.5rem;
+    width: 10%;
+    left: 45%;
+    bottom: -5px;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  .images-container {
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 3fr));
+    gap: 3rem;
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+  }
+}
